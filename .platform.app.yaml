@@ -46,6 +46,11 @@ mounts:
     '/private':
         source: local
         source_path: 'private'
+    # Configuration data is stored outside of the web root. The settings.platformsh.php
+    # file will automatically configure Drupal to use this directory.
+    '/config':
+      source: local
+      source_path: 'config'
     # Drush needs a scratch space for its own caches.
     '/.drush':
         source: local
