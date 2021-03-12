@@ -97,6 +97,9 @@ if ($platformsh->inRuntime()) {
   if (!isset($settings['file_temp_path'])) {
     $settings['file_temp_path'] = $platformsh->appDir . '/tmp';
   }
+  if (!isset($settings['config_sync_directory'])) {
+    $settings['config_sync_directory'] = $platformsh->appDir . '/config';
+  }
 
 // Configure the default PhpStorage and Twig template cache directories.
   if (!isset($settings['php_storage']['default'])) {
